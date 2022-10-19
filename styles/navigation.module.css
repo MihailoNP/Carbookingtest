@@ -1,0 +1,15 @@
+.navbar {
+  border-color: #3176bb6e;
+}
+
+.navbar a:hover {
+  font-weight: 500;
+}
+
+.navbar a:hover span {
+  color: #3176bb;
+}
+
+.mobile ul a:not(:last-child) {
+  border-bottom: 1px solid #3176bb;
+}

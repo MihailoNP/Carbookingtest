@@ -1,0 +1,55 @@
+.herosection {
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .herosection {
+    height: 500px;
+  }
+}
+
+.carContainer {
+  height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .carContainer::before {
+    content: '';
+    display: block;
+    height: 250px;
+    width: 150px;
+    background-color: #e0b388;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .carContainer::before {
+    content: '';
+    display: block;
+    height: 350px;
+    width: 200px;
+    background-color: #e0b388;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+}
+
+.carContainer > div {
+  width: 300px;
+  height: 170px;
+}
+
+@media screen and (min-width: 1024px) {
+  .carContainer > div {
+    width: 400px;
+    height: 220px;
+  }
+}

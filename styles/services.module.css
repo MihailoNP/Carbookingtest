@@ -1,0 +1,6 @@
+.bg {
+  background-image: url(/services-background.jpeg);
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

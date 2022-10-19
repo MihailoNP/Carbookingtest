@@ -1,0 +1,15 @@
+.error svg:hover + .message {
+  display: flex;
+}
+
+.message {
+  position: absolute;
+  z-index: 20;
+  top: -250%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  background-color: red;
+  color: white;
+  padding: 0.5rem;
+}

@@ -1,0 +1,633 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Document</title>
+    <style>
+      @font-face { font-family: Yantramanav-Regular; src:
+      url("https://carbooking.me/email/fonts/Yantramanav-Regular.ttf"); }
+      @font-face { font-family: Yantramanav-Regular; src:
+      url("fonts/Yantramanav-Regular.ttf"); } body { margin: 0;
+      background-color: rgb(243, 243, 243); font-family: Yantramanav-Regular;
+      size: 14px; } table { border-spacing: 0; } img { border: 0; } h5 { margin:
+      0; font-size: 14px; font-weight: 700; text-transform: uppercase; } span, p
+      { font-size: 12px; font-weight: normal; color: rgb(90, 90, 90); } a {
+      text-decoration: none; color: rgb(49, 121, 180); } .wrapper { width:
+      600px; table-layout: fixed; background-color: rgb(255, 255, 255); padding:
+      30px; margin: 0 auto; } .table-style { border-collapse: collapse; width:
+      100%; border-spacing: 0; background-color: transparent; } .bg-img {
+      background-image: url("https://carbooking.me/email/Pozadina.jpg"); width:
+      600px; background-size: 506px 254px; background-repeat: no-repeat;
+      background-position: center; } .blue-line { color: rgb(49, 121, 180);
+      border-bottom: 2px solid rgb(49, 121, 180); } .blue-text { color: rgb(49,
+      121, 180); font-size: 12px; font-weight: bold; } .m-0 { margin: 0; } .mt35
+      { margin-top: 35px; } .mt-mb7 { margin: 7px 0; } .mb7-mt14 { margin: 14px
+      0 7px 0; } .mt30 { margin-top: 30px; } .mb30 { margin-bottom: 30px; } .mb7
+      { margin-bottom: 7px; } .mt-25 { margin-top: 25px; } .mt16 { margin-top:
+      16px; } .mb10 { margin-bottom: 10px; } .pr4 { padding-right: 4px; } .pr8 {
+      padding-right: 8px; } .gray-line { border-bottom: 1px solid rgb(185, 181,
+      181); } .gray-line-bold { border-bottom: 1.5px solid rgb(90, 90, 90); }
+      .table-gray-border { margin-top: 25px; padding: 6px; border: 2px solid
+      rgb(90, 90, 90); width: 100%; box-sizing: border-box; } .d-block {
+      display: block; } .d-inline { display: inline; } .text-align-end {
+      text-align: end; } .v-align-middle { vertical-align: middle; }
+      .v-align-toptext { vertical-align: text-top; } .font-size12 { font-size:
+      12px; } .bold { font-weight: bold; } .float { float: right; }
+    </style>
+  </head>
+  <body>
+    <div class='wrapper bg-img'>
+      <table class='table-style'>
+        <thead>
+          <tr>
+            <td colspan='5'>
+              <img
+                src='https://carbooking.me/email/logo.jpg'
+                alt='logotip'
+                width='112'
+                height='54'
+              />
+            </td>
+
+            <td class='text-align-end'>
+              <p class='m-0 blue-text'>www.carbooking.me</p>
+              <p class='m-0 blue-text'>office@carbooking.me</p>
+              <p class='m-0 blue-text'>(+382) 68 55 89 43</p>
+              <p class='m-0 blue-text'>(+382) 69 55 89 43</p>
+            </td>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr class='blue-line'>
+            <td style='width: 120px'><h5>RESERVATION:</h5></td>
+            <td class='v-align-middle'><span>{{reservationId}}</span></td>
+            <td style='width: 50px; padding-left: 10px'><h5>DATE:</h5></td>
+            <td class='v-align-middle'><span>{{currentDate}}</span></td>
+            <td colspan='2' class='text-align-end' style='padding-bottom: 14px'>
+              <p class='m-0 blue-text'>Marka Miljanova 50C</p>
+              <p class='m-0 blue-text'>81000 Podgorica, Crna Gora</p>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan='5'>
+              <p>
+                Dear
+                <strong>{{name}}</strong>,
+                <br />
+                Your reservation has been successfully forwarded. We will
+                contact you shortly.
+              </p>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <table class='table-style'>
+        <thead>
+          <tr class='blue-line'>
+            <td colspan='6'>
+              <h5>My Info</h5>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class='gray-line'>
+            <td style='width: 45%'><p class='mb7-mt14'>First name and last name:</p></td>
+            <td>
+              <p class='mb7-mt14'><strong>{{name}}</strong></p>
+            </td>
+          </tr>
+
+          <tr class='gray-line'>
+            <td><p class='mt-mb7'>E-mail:</p></td>
+            <td>
+              <p class='mt-mb7'><strong>{{email}}</strong></p>
+            </td>
+          </tr>
+
+          <tr class='gray-line'>
+            <td><p class='mt-mb7'>Phone:</p></td>
+            <td>
+              <p class='mt-mb7'><strong>{{phoneNumber}}</strong></p>
+            </td>
+          </tr>
+
+          <tr class='gray-line'>
+            <td><p class='mt-mb7'>Age:</p></td>
+            <td>
+              <p class='mt-mb7'><strong>{{years}}</strong></p>
+            </td>
+          </tr>
+          <tr class='gray-line'>
+            <td><p class='mt-mb7'>State:</p></td>
+            <td>
+              <p class='mt-mb7'><strong>{{state}}</strong></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class='table-style mt-25'>
+        <thead>
+          <tr class='blue-line'>
+            <td colspan='6'>
+              <h5>EXTRAS</h5>
+            </td>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              <h5 class='mt16'>Insurance::</h5>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan='5'>
+              <p class='m-0 d-inline'>
+                <strong>Casco insurance with participation in claims (CDW / TP)</strong>
+                --- Included in the price - 0.00{{currency}}
+                per day
+              </p>
+              <img
+                src='https://carbooking.me/email/strik.jpg'
+                alt='strik'
+                class='float'
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan='5'>
+              <p class='m-0 d-inline'>
+                <strong>Passenger Insurance (PAI)</strong>
+                --- Included in the price 0.00{{currency}}
+                per day
+              </p>
+              <img
+                src='https://carbooking.me/email/strik.jpg'
+                alt='strik'
+                class='float'
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan='5'>
+              <p class='m-0 d-inline'>
+                <strong>Purchase of liability for damage to tires, chassis and
+                  glass (WUG)</strong>
+                ---
+                {{extras.wug.price}}
+                per day
+              </p>
+              {{#if extras.wug.selected}}
+                <img
+                  src='https://carbooking.me/email/checked.jpg'
+                  alt='check'
+                  class='float'
+                />
+              {{else}}
+                <img
+                  src='https://carbooking.me/email/unchecked.jpg'
+                  alt='uncheck'
+                  class='float'
+                />
+              {{/if}}
+            </td>
+          </tr>
+          <tr>
+            <td colspan='5'>
+              <p class='m-0 d-inline'>
+                <strong>Redemption of liability for participation in damage (CDW
+                  +)</strong>
+                ---
+                {{extras.cdw.price}}
+                per day
+                {{#if extras.cdw.selected}}
+                  <img
+                    src='https://carbooking.me/email/checked.jpg'
+                    alt='check'
+                    class='float'
+                  />
+                {{else}}
+                  <img
+                    src='https://carbooking.me/email/unchecked.jpg'
+                    alt='uncheck'
+                    class='float'
+                  />
+                {{/if}}
+              </p>
+            </td>
+          </tr>
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <td>
+              <h5 class='mt16'>EXTRAS:</h5>
+            </td>
+          </tr>
+          <tr>
+            <td width='49%'>
+              <p class='m-0'>
+                <strong>Vehicle delivery</strong>
+                GRATIS
+                <img
+                  src='https://carbooking.me/email/checked.jpg'
+                  alt='check'
+                  class='float'
+                />
+              </p>
+
+              <p class='m-0'>
+                <strong>Welcome drink</strong>
+                GRATIS
+                {{#if extras.drink.selected}}
+                  <img
+                    src='https://carbooking.me/email/checked.jpg'
+                    alt='check'
+                    class='float'
+                  />
+                {{else}}
+                  <img
+                    src='https://carbooking.me/email/unchecked.jpg'
+                    alt='uncheck'
+                    class='float'
+                  />
+                {{/if}}
+              </p>
+
+              <p class='m-0'>
+                <strong>Child seat</strong>
+                GRATIS
+                <strong class='float'>{{extras.childSeat.value}}</strong>
+              </p>
+
+              <p class='m-0'>
+                <strong>Additional driver</strong>
+                GRATIS
+                {{#if extras.additionalDriver.selected}}
+                  <img
+                    src='https://carbooking.me/email/checked.jpg'
+                    alt='check'
+                    class='float'
+                  />
+                {{else}}
+                  <img
+                    src='https://carbooking.me/email/unchecked.jpg'
+                    alt='uncheck'
+                    class='float'
+                  />
+                {{/if}}
+              </p>
+
+              <p class='m-0'>
+                <strong>Winter equipment</strong>GRATIS
+                {{#if extras.winterEquipment.selected}}
+                  <img
+                    src='https://carbooking.me/email/checked.jpg'
+                    alt='check'
+                    class='float'
+                  />
+                {{else}}
+                  <img
+                    src='https://carbooking.me/email/unchecked.jpg'
+                    alt='uncheck'
+                    class='float'
+                  />
+                {{/if}}
+              </p>
+
+              <p class='m-0'>
+                <strong>GPS navigation</strong>
+                GRATIS
+                {{#if extras.gps.selected}}
+                  <img
+                    src='https://carbooking.me/email/checked.jpg'
+                    alt='check'
+                    class='float'
+                  />
+                {{else}}
+                  <img
+                    src='https://carbooking.me/email/unchecked.jpg'
+                    alt='uncheck'
+                    class='float'
+                  />
+                {{/if}}
+              </p>
+
+              <p class='m-0'>
+                <strong>Roof suitcase</strong>
+                GRATIS
+                {{#if extras.roofSuitcase.selected}}
+                  <img
+                    src='https://carbooking.me/email/checked.jpg'
+                    alt='check'
+                    class='float'
+                  />
+                {{else}}
+                  <img
+                    src='https://carbooking.me/email/unchecked.jpg'
+                    alt='uncheck'
+                    class='float'
+                  />
+                {{/if}}
+              </p>
+
+              <p class='m-0'>
+                <strong>Mifi 4g router - </strong>
+                {{extras.router.price}}
+                PER DAY, MAX
+                {{extras.router.maxPrice}}
+                {{#if extras.router.selected}}
+                  <img
+                    src='https://carbooking.me/email/checked.jpg'
+                    alt='check'
+                    class='float'
+                  />
+                {{else}}
+                  <img
+                    src='https://carbooking.me/email/unchecked.jpg'
+                    alt='uncheck'
+                    class='float'
+                  />
+                {{/if}}
+              </p>
+            </td><td width='2%'></td>
+            <td width='49%' style='vertical-align: baseline'>
+              <p class='m-0'>
+                <strong>Green card - </strong>
+                {{extras.greenCard.price}}
+                ONE-TIME
+                {{#if extras.greenCard.selected}}
+                  <img
+                    src='https://carbooking.me/email/checked.jpg'
+                    alt='check'
+                    class='float'
+                  />
+                {{else}}
+                  <img
+                    src='https://carbooking.me/email/unchecked.jpg'
+                    alt='uncheck'
+                    class='float'
+                  />
+                {{/if}}
+              </p>
+
+              <p class='m-0'>
+                <strong>An umbrella</strong>
+                GRATIS
+                <strong class='float'>{{extras.umbrella.value}}</strong>
+              </p>
+
+              <p class='m-0'>
+                <strong>Ball / mattress / tire pump</strong>
+                GRATIS
+                {{#if extras.tireEquipment.selected}}
+                  <img
+                    src='https://carbooking.me/email/checked.jpg'
+                    alt='check'
+                    class='float'
+                  />
+                {{else}}
+                  <img
+                    src='https://carbooking.me/email/unchecked.jpg'
+                    alt='uncheck'
+                    class='float'
+                  />
+                {{/if}}
+              </p>
+
+              <p class='m-0'>
+                <strong>Paper map of Montenegro</strong>
+                GRATIS
+                {{#if extras.map.selected}}
+                  <img
+                    src='https://carbooking.me/email/checked.jpg'
+                    alt='check'
+                    class='float'
+                  />
+                {{else}}
+                  <img
+                    src='https://carbooking.me/email/unchecked.jpg'
+                    alt='uncheck'
+                    class='float'
+                  />
+                {{/if}}
+              </p>
+
+              <p class='m-0'>
+                <strong>Charger for android</strong>
+                GRATIS
+                <strong class='float'>{{extras.androidCharger.value}}</strong>
+              </p>
+
+              <p class='m-0'>
+                <strong>Charger for Iphone</strong>
+                GRATIS
+                <strong class='float'>{{extras.iphoneCharger.value}}</strong>
+              </p>
+
+              <p class='m-0'>
+                <strong>Xiaomi Mi Electric Scooter Essential - </strong>
+                {{extras.scooter.price}}
+                PER DAY, MAX
+                {{extras.scooter.maxPrice}}
+                {{#if extras.scooter.selected}}
+                  <img
+                    src='https://carbooking.me/email/checked.jpg'
+                    alt='check'
+                    class='float'
+                  />
+                {{else}}
+                  <img
+                    src='https://carbooking.me/email/unchecked.jpg'
+                    alt='uncheck'
+                    class='float'
+                  />
+                {{/if}}
+              </p>
+
+              <p class='m-0'>
+                <strong>Bicycle Car Holder - </strong>
+                {{extras.bicycleHolder.price}}
+                PER DAY, MAX
+                {{extras.bicycleHolder.maxPrice}}
+                {{#if extras.bicycleHolder.selected}}
+                  <img
+                    src='https://carbooking.me/email/checked.jpg'
+                    alt='check'
+                    class='float'
+                  />
+                {{else}}
+                  <img
+                    src='https://carbooking.me/email/unchecked.jpg'
+                    alt='uncheck'
+                    class='float'
+                  />
+                {{/if}}
+              </p>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <table class='table-style mt-25'>
+        <thead>
+          <tr class='blue-line' style='display: block;'>
+            <td>
+              <h5>MESSAGE</h5>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <p>{{message}}</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class='table-style'>
+        <thead>
+          <tr class='blue-line'>
+            <td colspan='6'><h5 class='mt14'>RESERVATION DETAILS</h5></td>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr class='gray-line'>
+            <td style='width: 45%'><p class='mb7-mt14'>Vehicle:</p></td>
+            <td>
+              <p class='mb7-mt14'><strong>{{vehicle}}</strong></p>
+            </td>
+          </tr>
+
+          <tr class='gray-line'>
+            <td><p class='mt-mb7'>Transmission:</p></td>
+            <td>
+              <p class='mt-mb7'><strong>{{automatic}}</strong></p>
+            </td>
+          </tr>
+
+          <tr class='gray-line'>
+            <td><p class='mt-mb7'>Fuel:</p></td>
+            <td>
+              <p class='mt-mb7'><strong>{{fuel}}</strong></p>
+            </td>
+          </tr>
+
+          <tr class='gray-line'>
+            <td><p class='mt-mb7'>Date and time of picking up:</p></td>
+            <td>
+              <p class='mt-mb7'><strong>{{pickupDate}}</strong></p>
+            </td>
+          </tr>
+
+          <tr class='gray-line'>
+            <td><p class='mt-mb7'>Date and time of returning:</p></td>
+            <td>
+              <p class='mt-mb7'><strong>{{returnDate}}</strong></p>
+            </td>
+          </tr>
+
+          <tr class='gray-line'>
+            <td><p class='mt-mb7'>Place of pick-up:</p></td>
+            <td>
+              <p class='mt-mb7'><strong>{{pickupLocation}}</strong></p>
+            </td>
+          </tr>
+
+          <tr class='gray-line'>
+            <td><p class='mt-mb7'>Place of return:</p></td>
+            <td>
+              <p class='mt-mb7'><strong>{{returnLocation}}</strong></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class='table-gray-border'>
+        <table class='table-style'>
+          <thead>
+            <tr>
+              <td class='blue-line' colspan='6'>
+                <h5 class='mt14'>RESERVATION PRICE</h5>
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class='gray-line'>
+              <td colspan='5'>
+                <p class='mb7-mt14'>Car rental:</p>
+              </td>
+              <td>
+                <p class='text-align-end mb7-mt14'><strong
+                  >{{rentalAmount}}</strong></p>
+              </td>
+            </tr>
+
+            <tr class='gray-line'>
+              <td colspan='5'>
+                <p class='mt-mb7'>Extras:</p>
+              </td>
+              <td>
+                <p class='text-align-end mt-mb7'><strong
+                  >{{extrasAmount}}</strong></p>
+              </td>
+            </tr>
+
+            <tr class='gray-line'>
+              <td colspan='5'>
+                <p class='mt30 mb7'>Total:</p>
+              </td>
+              <td>
+                <p class='text-align-end mt30 mb7'><strong
+                  >{{totalAmount}}</strong></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <table class='table-style'>
+        <tbody>
+          <tr>
+            <td colspan='5'>
+              <p class='font-size12 mb30'>
+                <strong>Note:</strong>
+                This is a system email, do not reply to it.
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table style='margin: 0 auto'>
+        <tbody>
+          <tr>
+            <td style='text-align: end'>
+              <img
+                src='https://carbooking.me/email/instagram-icon.jpg'
+                alt='Instagram Icon'
+                width='25'
+                height='25'
+              />
+            </td>
+            <td>
+              <img
+                src='https://carbooking.me/email/facebook-icon.jpg'
+                alt='Facebook Icon'
+                width='25'
+                height='25'
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
